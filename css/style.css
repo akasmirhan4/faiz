@@ -1,0 +1,161 @@
+main {
+  background-color: black;
+}
+
+#menuBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: clamp(2em, 20px, 40px);
+  background-color: #3c3c3c;
+}
+
+#menuBar a {
+  color: #b1b1b1;
+  display: block;
+  width: 70px;
+  text-align: center;
+  line-height: calc(100% + 1em);
+}
+
+#menuBar a:hover {
+  text-decoration: none;
+  background-color: #323232;
+}
+
+.icon {
+  height: 100%;
+}
+
+#iconSideBar {
+  width: clamp(2em, 50px, 80px);
+  background-color: #333333;
+}
+
+span {
+  color: white;
+}
+
+hr {
+  height: 2px;
+  color: gray;
+  background-color: gray;
+  margin: 0px;
+}
+
+#linkSideBar {
+  width: 200px;
+  background-color: #252526;
+}
+
+#linkSideBar a {
+  display: block;
+  width: 193px;
+  height: 1.7em;
+  margin-left: 6px;
+}
+
+#linkSideBar a:hover {
+  background-color: #333333;
+  text-decoration: none;
+}
+
+#iconSideBar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: clamp(2em, 50px, 80px);
+  height: clamp(2em, 50px, 80px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#iconSideBar a:hover {
+  background-color: #444;
+  text-decoration: none;
+}
+
+#theRest {
+  width: calc(100% - 200px - clamp(2em, 50px, 80px));
+}
+
+#topBar {
+  background-color: #252526;
+  width: 100%;
+  height: 2.1em;
+}
+
+#topBar a {
+  display: inline-block;
+  height: 100%;
+  padding-left: 13px;
+  min-width: 120px;
+  border-style: none double solid double;
+  border-color: #111;
+  border-radius: 5px;
+  color: #aaa;
+}
+
+#topBar a:hover {
+  background-color: #aaa;
+  color: black;
+  text-decoration: none;
+}
+
+#chevrons {
+  background-color: #161616;
+  width: 100%;
+  height: 1.1em;
+  line-height: 1.1em;
+}
+
+#chevrons span {
+  margin-left: 1em;
+}
+
+#textArea {
+  background-color: #1e1e1e;
+  width: 100%;
+  overflow: auto;
+}
+
+.editorLines {
+  min-height: 1.3em;
+  width: 100%;
+  max-width: 100%;
+}
+
+.editorLines span {
+  color: #888;
+}
+
+.nambah {
+  display: inline-block;
+  padding-left: 0.4em;
+  /* background-color:#2a2a2a;*/
+  width: 2em;
+}
+
+.editables {
+  display: inline-block;
+  padding-left: 0.4em;
+  width: calc(100% - 2.8em);
+}
+
+.editorLines:hover {
+  background-color: #252526;
+}
+
+@media (max-width: 500px) {
+  main {
+    display: none;
+  }
+  body::after {
+    content: "Sorry but your screen is too small I think";
+  }
+}
+/*# sourceMappingURL=style.css.map */

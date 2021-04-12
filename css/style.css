@@ -1,21 +1,36 @@
 main {
   background-color: black;
+  overflow: hidden;
+  position: fixed;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #menuBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: clamp(2em, 20px, 40px);
   background-color: #3c3c3c;
+  justify-items: center;
 }
 
 #menuBar a {
   color: #b1b1b1;
-  display: block;
-  width: 70px;
-  text-align: center;
-  line-height: calc(100% + 1em);
+  padding: 0 2em;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menuBar a p {
+  margin: auto 0;
 }
 
 #menuBar a:hover {
@@ -23,16 +38,43 @@ main {
   background-color: #323232;
 }
 
+#restOfStuff {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .icon {
-  height: 100%;
+  height: 2em;
 }
 
 #iconSideBar {
-  width: clamp(2em, 50px, 80px);
   background-color: #333333;
 }
 
-span {
+#iconSideBar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#iconSideBar a:hover {
+  background-color: #444;
+  text-decoration: none;
+}
+
+#linkSideBar span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.4em;
   color: white;
 }
 
@@ -44,7 +86,7 @@ hr {
 }
 
 #linkSideBar {
-  width: 200px;
+  width: 15em;
   background-color: #252526;
 }
 
@@ -60,27 +102,17 @@ hr {
   text-decoration: none;
 }
 
-#iconSideBar a {
+#theRest {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: clamp(2em, 50px, 80px);
-  height: clamp(2em, 50px, 80px);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#iconSideBar a:hover {
-  background-color: #444;
-  text-decoration: none;
-}
-
-#theRest {
-  width: calc(100% - 200px - clamp(2em, 50px, 80px));
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #topBar {
@@ -92,7 +124,7 @@ hr {
 #topBar a {
   display: inline-block;
   height: 100%;
-  padding-left: 13px;
+  padding: 0.2em 1em;
   min-width: 120px;
   border-style: none double solid double;
   border-color: #111;
@@ -108,9 +140,7 @@ hr {
 
 #chevrons {
   background-color: #161616;
-  width: 100%;
-  height: 1.1em;
-  line-height: 1.1em;
+  color: lightgrey;
 }
 
 #chevrons span {
@@ -120,13 +150,20 @@ hr {
 #textArea {
   background-color: #1e1e1e;
   width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   overflow: auto;
+  height: 10vh;
 }
 
 .editorLines {
   min-height: 1.3em;
   width: 100%;
   max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .editorLines span {
@@ -142,8 +179,15 @@ hr {
 
 .editables {
   display: inline-block;
-  padding-left: 0.4em;
-  width: calc(100% - 2.8em);
+  margin: 0 0.5em;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.editables:focus {
+  outline: rgba(255, 255, 255, 0.1) solid 1px;
+  color: white;
 }
 
 .editorLines:hover {

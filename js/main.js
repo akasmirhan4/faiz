@@ -1,14 +1,18 @@
 let textArea = document.getElementById("textArea");
-for(let i = 0; i<100;i++){
-  let newDiv = document.createElement("div");
-  newDiv.classList.add("editorLines");
-  let number = document.createElement("span");
-  number.innerText = i;
-  number.classList.add("nambah");
-  let text = document.createElement("span");
-  text.classList.add("editables");
-  text.setAttribute("contenteditable", "true");
-  newDiv.append(number);
-  newDiv.append(text);
-  textArea.append(newDiv);
+
+const NLINES = 500;
+for (let i = 1; i <= NLINES; i++) {
+    let newDiv = document.createElement("div");
+    let number = document.createElement("span");
+    let text = document.createElement("span");
+
+    newDiv.classList.add("editorLines");
+    newDiv.setAttribute("line-no", i);
+    number.innerText = i;
+    number.classList.add("nambah");
+    text.classList.add("editables");
+    text.setAttribute("contenteditable", "true");
+    newDiv.append(number);
+    newDiv.append(text);
+    textArea.append(newDiv);
 }
